@@ -12,20 +12,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li class="nav1"><a href="/main">all blabs</a></li>
-        <li class="nav2"><a href="/new">new blab</a></li>
-        <li class="nav3"><a href="/mine">my blabs</a></li>
-        <li class="nav4"><a href="/logout">blab ya later</a></li>
-      </ul>
-    </nav>
-    <main>
-      <h1>new blab</h1>
-      <form class="editblab" action="/editblab" method="post">
-        <input type="textarea" name="editlab" value="##FIX ME PLEASE##">
-        <button type="submit" name="edit-button"></button>
-      </form>
-    </main>
+    <div class="main-body">
+      <nav>
+        <h1>blabber</h1>
+        <ul>
+          <li class="nav1"><a href="/">all blabs</a></li>
+          <li class="nav2"><a href="/new">new blab</a></li>
+          <li class="nav3"><a href="/mine">my blabs</a></li>
+          <form class="" action="/logout" method="post">
+            <button type="submit" name="button">Later!</button>
+          </form>
+        </ul>
+      </nav>
+      <main>
+        <h2>edit blab</h2>
+        {{#blab}}
+        <form class="blab" action="/blab/edit/{{id}}/editme" method="post">
+          <input type="textarea" name="editblab" value="{{body}}">
+          <button type="submit" name="new-button">omg blab</button>
+        </form>
+        {{/blab}}
+      </main>
+    </div>
   </body>
 </html>

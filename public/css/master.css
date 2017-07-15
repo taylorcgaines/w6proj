@@ -122,7 +122,57 @@ nav h1{
 main{
   width: 100%;
 }
+main h2{
+  color: #9D0B42;
+  font-size: 2.5rem;
+  margin-left: 1%;
+}
+h4, h5{
+  color: #44051D;
+  margin-left: 2%;
+}
+
 .blab h3{
   color: #9D0B42;
   font-size: 1.5rem;
+}
+.blab {
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFCFD;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+.blab button{
+  background-color: #8A4FFF;
+  border-radius: 15px;
+  color: #FFFCFD;
+  border: none;
+  padding: .5vw;
+}
+.newblab{
+  display:flex;
+  flex-direction: column;
+  height: 5vw;
+  width: 70%;
+  align-content: center;
+  margin-left: 15%;
+}
+
+.newblab button{
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 1vw;
+  background-color: #8A4FFF;
+  border-radius: 15px;
+  color: #FFFCFD;
+  border: none;
+  padding: .5vw;
+}
+
+.newblab input{
+  text-align: center;
+  height: 1.5vw;
 }

@@ -25,12 +25,29 @@
       </ul>
     </nav>
     <main>
-      <h2>new blab</h2>
-      <form class="newblab" action="/new/addblab" method="post">
-        <input type="textarea" name="newblab" value="">
-        <button type="submit" name="new-button">omg blab</button>
-      </form>
-    </main>
+      <h2>blabs</h2>
+      <div class="blabs">
+        {{#blabs}}
+        <div class="blab">
+          <div class="blab-bod">
+            <h3>{{User.username}}</h3>
+            <h4>{{body}}</h4>
+            <h5>{{createAt}}</h5>
+            <h4>{{Likes.length}} heckyeahs</h4>
+          </div>
+          <div class="blab-butt">
+            <form class="" action="blab/edit/{{id}}" method="get">
+              <button type="submit" name="editbutton">changeit</button>
+            </form>
+            <form class="" action="blab/delete/{{id}}" method="post">
+              <button type="submit" name="deletebutton">makeitpoof</button>
+            </form>
+          </div>
+        </div>
+        {{/blabs}}
+      </div>
+  </div>
+  </main>
   </div>
 </body>
 

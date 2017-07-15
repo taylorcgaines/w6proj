@@ -16,41 +16,35 @@
     <nav>
       <h1>blabber</h1>
       <ul>
-        <li class="nav1"><a href="/main">all blabs</a></li>
+        <li class="nav1"><a href="/">all blabs</a></li>
         <li class="nav2"><a href="/new">new blab</a></li>
         <li class="nav3"><a href="/mine">my blabs</a></li>
-        <li class="nav4"><a href="/logout">blab ya later</a></li>
+        <form class="" action="/logout" method="post">
+          <button type="submit" name="button">Later!</button>
+        </form>
       </ul>
     </nav>
     <main>
+      <h2>blabs</h2>
       <div class="blabs">
-        <h2>blabs</h2>
+        {{#blabs}}
         <div class="blab">
-          <h3>USERPLACEHOLDER:</h3>
-          <h4>MSG MSG MSG MSG MSGMSG MSG MSG MSG MSG</h4>
-          <h5>TIME TIME TIME TIME TIME TIME</h5>
-          <h4>NUM LIKES</h4>
+          <div class="blab-bod">
+            <h3>{{User.username}}</h3>
+            <h4>{{body}}</h4>
+            <h5>{{createAt}}</h5>
+            <h4>{{Likes.length}} heckyeahs</h4>
+          </div>
+          <div class="blab-butt">
+            <form class="" action="blab/{{id}}/like" method="post">
+              <button type="submit" name="likebutton">heckyeah</button>
+            </form>
+          </div>
         </div>
-        <div class="blab">
-          <h3>USERPLACEHOLDER:</h3>
-          <h4>MSG MSG MSG MSG MSGMSG MSG MSG MSG MSG</h4>
-          <h5>TIME TIME TIME TIME TIME TIME</h5>
-          <h4>NUM LIKES</h4>
-        </div>
-        <div class="blab">
-          <h3>USERPLACEHOLDER:</h3>
-          <h4>MSG MSG MSG MSG MSGMSG MSG MSG MSG MSG</h4>
-          <h5>TIME TIME TIME TIME TIME TIME</h5>
-          <h4>NUM LIKES</h4>
-        </div>
-        <div class="blab">
-          <h3>USERPLACEHOLDER:</h3>
-          <h4>MSG MSG MSG MSG MSGMSG MSG MSG MSG MSG</h4>
-          <h5>TIME TIME TIME TIME TIME TIME</h5>
-          <h4>NUM LIKES</h4>
-        </div>
+        {{/blabs}}
       </div>
-    </main>
+  </div>
+  </main>
   </div>
 </body>
 
